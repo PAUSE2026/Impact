@@ -1,0 +1,1133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PAUSE | Impact Report 2026</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap');
+
+:root {
+  --cream: #fff8e9;
+  --paper: #fffdf5;
+  --orange: #ed8946;
+  --yellow: #f6cf74;
+  --purple: #76559b;
+  --pink: #f2c8d3;
+  --blue: #b7dce9;
+  --green: #dce7b8;
+  --ink: #463a37;
+  --muted: #766b65;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: #eae0d0;
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.8;
+}
+h1,h2,h3,h4 {
+  font-family: 'Nunito', sans-serif;
+  line-height: 1.25;
+}
+h1 { font-size: clamp(2.8rem,6vw,5.2rem); }
+h2 { font-size: clamp(2rem,4vw,3rem); }
+h3 { font-size: 1.35rem; }
+p { margin: 0 0 1.2rem; }
+a { color: #71459b; }
+strong { color: #53396b; }
+.page {
+  width: min(100%, 1050px);
+  margin: 28px auto;
+  padding: clamp(25px,6vw,78px);
+  background: var(--paper);
+  border-radius: 12px;
+  box-shadow: 0 8px 30px #513b2515;
+  position: relative;
+  overflow: hidden;
+}
+.page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(#a87b4d12 0.8px,transparent 0.8px);
+  background-size: 7px 7px;
+  opacity: .5;
+}
+.page > * { position: relative; }
+.eyebrow {
+  color: #a26742;
+  font-size: .76rem;
+  font-weight: 900;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.subtitle { color: var(--muted); font-size: 1.08rem; }
+.lead { font-size: 1.2rem; line-height: 1.9; }
+.center { text-align: center; }
+.story-art {
+  display: block;
+  width: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+  margin: 28px 0;
+}
+.story-art.small {
+  max-width: 570px;
+  margin: 28px auto;
+}
+.quote {
+  font-family: 'Nunito',sans-serif;
+  font-weight: 900;
+  font-size: clamp(1.5rem,3vw,2.3rem);
+  color: #77529c;
+  line-height: 1.45;
+  margin: 35px auto;
+  max-width: 800px;
+}
+.highlight {
+  background: #fff0c9;
+  border-radius: 12px;
+  padding: 24px;
+  margin: 24px 0;
+}
+.rule {
+  width: 75px;
+  height: 5px;
+  background: var(--orange);
+  border-radius: 8px;
+  margin: 20px 0 28px;
+}
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+.three-col {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 18px;
+}
+.panel {
+  background: #fff5e3;
+  border: 1px solid #eddfc9;
+  padding: 24px;
+  border-radius: 16px;
+}
+.panel.purple { background: #f0e9f7; }
+.panel.blue { background: #e8f3f7; }
+.panel.green { background: #eff2df; }
+.panel.pink { background: #faeaf0; }
+.panel h3 { margin-top: 0; }
+.stat {
+  font: 900 2.7rem 'Nunito',sans-serif;
+  color: #a95d32;
+  line-height: 1.2;
+}
+.caption {
+  font-size: .83rem;
+  color: var(--muted);
+  text-align: center;
+}
+.steps {
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  gap: 9px;
+  margin: 35px 0;
+}
+.step {
+  padding: 17px 8px;
+  text-align: center;
+  background: #f6e5c9;
+  border-radius: 14px;
+  font-weight: 900;
+  font-family: 'Nunito',sans-serif;
+}
+.step:nth-child(2) { background: #e7d9f0; }
+.step:nth-child(3) { background: #d8e9ed; }
+.step:nth-child(4) { background: #f5d9e1; }
+.step:nth-child(5) { background: #e4ebcd; }
+.note-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 25px;
+  padding: 15px 0;
+}
+.sticky {
+  background: #fff0a9;
+  padding: 28px 25px;
+  min-height: 165px;
+  box-shadow: 3px 6px 8px #4c38201a;
+  border-radius: 2px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  transform: rotate(-1deg);
+}
+.sticky:nth-child(2n) {
+  background: #f3dce7;
+  transform: rotate(1.3deg);
+}
+.sticky:nth-child(3n) {
+  background: #dcebf2;
+  transform: rotate(-.6deg);
+}
+.sticky:nth-child(5n) {
+  background: #e6eac9;
+}
+.sticky::before {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 16px;
+  background: #ffffff80;
+  margin: -36px auto 18px;
+  transform: rotate(-4deg);
+}
+.stage-label {
+  font-weight: 900;
+  color: var(--purple);
+  letter-spacing: .06em;
+  font-size: .82rem;
+  text-transform: uppercase;
+}
+.action {
+  display: inline-block;
+  background: #805a9c;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 800;
+}
+.action:hover { background: #5d3d7b; }
+.timeline {
+  border-left: 3px dashed #e6a367;
+  padding-left: 25px;
+  margin: 25px 0;
+}
+.timeline article { margin-bottom: 26px; }
+.footer {
+  text-align: center;
+  font-size: .85rem;
+  color: #887a6b;
+  margin-top: 45px;
+}
+nav {
+  background: #fff8ed;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+nav a {
+  font-size: .83rem;
+  text-decoration: none;
+  font-weight: 800;
+}
+@media(max-width:700px) {
+  .two-col,.three-col,.note-grid { grid-template-columns:1fr; }
+  .steps { grid-template-columns:repeat(2,1fr); }
+  .page { margin:12px auto; border-radius:0; }
+}
+@media print {
+  body { background:white; }
+  nav { display:none; }
+  .page {
+    box-shadow:none;
+    break-after:page;
+    margin:0;
+    width:100%;
+  }
+  .sticky,.panel { break-inside:avoid; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <strong>PAUSE · 2026</strong>
+  <div>
+    <a href="#story">Our Story</a> ·
+    <a href="#impact">Impact</a> ·
+    <a href="#voices">Reflections</a> ·
+    <a href="#partners">Partnership</a>
+  </div>
+</nav>
+
+<!-- COVER -->
+<section class="page center" id="home">
+  <div class="eyebrow">Violence Ends With Us · Youth-Led Innovation</div>
+  <h1>PAUSE</h1>
+  <p style="font-weight:900;color:#8c619f">
+    Positive Alternatives to Unsafe & Severe Enforcement
+  </p>
+  <img class="story-art"
+       src="assets/1.png"
+       alt="Mother embracing her child">
+  <h2>A moment to look back.<br>A moment to choose differently.</h2>
+  <p class="subtitle">
+    Impact Report & Community Implementation Guide · Pilot 2026
+  </p>
+  <p><strong>Love should never have to hurt.</strong></p>
+</section>
+
+<!-- OPENING -->
+<section class="page" id="story">
+  <div class="eyebrow">01 · The Story Behind PAUSE</div>
+  <h2>“I don't want to be an angry mom.”</h2>
+  <div class="rule"></div>
+  <p class="lead">
+    These were the words of one parent during our community pilot
+    implementation of PAUSE, where we engaged parents, teachers,
+    and community workers.
+  </p>
+  <p>
+    For us, those words reflect why PAUSE exists.
+  </p>
+  <p>
+    PAUSE is a youth-led initiative committed to ending violence
+    against children by promoting positive, respectful, and
+    nonviolent approaches to discipline.
+  </p>
+  <p>
+    We recognize that many children grow up in environments where
+    harsh discipline is normalized as an expression of love,
+    and these experiences can shape how they eventually guide
+    the next generation.
+  </p>
+  <img class="story-art"
+       src="assets/8.png"
+       alt="A child experiencing a difficult moment">
+  <div class="highlight">
+    <p class="quote">
+      We cannot change what we have never had
+      the opportunity to reflect on.
+    </p>
+  </div>
+  <p>
+    PAUSE emerged as a winning hackathon initiative during the
+    Asia-Pacific Youth-Led Summit on Ending Violence Against
+    Children. It began with a child's perspective and a simple
+    belief: love should never have to hurt.
+  </p>
+</section>
+
+<!-- THE PROBLEM -->
+<section class="page">
+  <div class="eyebrow">02 · Understanding the Problem</div>
+  <h2>When discipline becomes something we carry</h2>
+  <div class="rule"></div>
+  <img class="story-art"
+       src="assets/7.png"
+       alt="Child reflecting on a difficult experience">
+  <p>
+    Many adults remember being shouted at, threatened, humiliated,
+    or physically punished as children. Some grew up hearing
+    that these experiences were necessary because their parents
+    loved them and wanted them to learn.
+  </p>
+  <p>
+    But discipline should help children understand their actions,
+    develop responsibility, and learn how to make better choices.
+    It should not require children to experience pain, fear,
+    or humiliation.
+  </p>
+  <div class="panel purple">
+    <h3>What is corporal punishment?</h3>
+    <p>
+      Corporal punishment involves using physical force with
+      the intention of causing some degree of pain or discomfort,
+      however light, as a form of punishment.
+    </p>
+    <p>
+      It includes practices such as hitting, slapping, spanking,
+      and other physically punitive responses.
+    </p>
+  </div>
+  <p>
+    Research reviewed by the World Health Organization has
+    associated corporal punishment with harmful outcomes
+    for children's physical and mental health, behavior,
+    and development. It has not established positive
+    developmental benefits from corporal punishment.
+  </p>
+  <p>
+    For PAUSE, this is not simply about changing a disciplinary
+    technique. It is also about understanding why harmful
+    responses can become familiar, how adults respond under
+    stress, and what support is needed to choose differently.
+  </p>
+  <p class="caption">
+    Reference: World Health Organization,
+    Corporal Punishment and Health.
+  </p>
+</section>
+
+<!-- WHY REFLECTION -->
+<section class="page">
+  <div class="eyebrow">03 · Our Perspective</div>
+  <h2>Before we teach another way, we create space to remember.</h2>
+  <img class="story-art"
+       src="assets/4.png"
+       alt="Child quietly reflecting">
+  <p>
+    Parents and caregivers may already know that shouting,
+    spanking, or reacting in anger can hurt children.
+    But knowing that something is harmful does not always
+    make it easy to respond differently.
+  </p>
+  <p>
+    Daily stress, childhood experiences, limited support,
+    and familiar patterns can influence how adults react
+    when children make mistakes.
+  </p>
+  <p>
+    That is why PAUSE does not begin by telling parents
+    everything they are doing wrong.
+  </p>
+  <p>
+    Instead, we invite them to reflect:
+  </p>
+  <div class="note-grid">
+    <div class="sticky">What happened to me when I made a mistake as a child?</div>
+    <div class="sticky">What do I notice in the way I respond today?</div>
+    <div class="sticky">What do I want my child to experience differently?</div>
+    <div class="sticky">What is one response I can begin changing?</div>
+  </div>
+  <p>
+    These questions do not replace positive parenting education.
+    They create a personal starting point for learning,
+    practicing, and seeking support.
+  </p>
+</section>
+
+<!-- THE INNOVATION -->
+<section class="page">
+  <div class="eyebrow">04 · Our Innovation</div>
+  <h2>What is PAUSE?</h2>
+  <div class="rule"></div>
+  <p class="lead">
+    PAUSE is a short, self-guided digital reflection experience
+    that invites adults to look back at how they experienced
+    discipline as children, recognize what they may be carrying
+    into their responses today, and consider what they want
+    to do differently.
+  </p>
+  <div class="steps">
+    <div class="step">Pause</div>
+    <div class="step">Ask</div>
+    <div class="step">Understand</div>
+    <div class="step">Support</div>
+    <div class="step">Encourage</div>
+  </div>
+  <div class="three-col">
+    <div class="panel">
+      <h3>Digital Toolkit</h3>
+      <p>
+        A multilingual online experience with reflection
+        activities, text-to-voice, videos, and resources.
+      </p>
+    </div>
+    <div class="panel purple">
+      <h3>Circle of Change</h3>
+      <p>
+        Five connected reflection stations that move
+        from childhood memories to personal commitments.
+      </p>
+    </div>
+    <div class="panel blue">
+      <h3>Community Engagement</h3>
+      <p>
+        Short facilitated experiences and reflection
+        cards that can be shared through existing networks.
+      </p>
+    </div>
+  </div>
+  <img class="story-art"
+       src="assets/10.png"
+       alt="Mother and child drawing together">
+  <p>
+    The toolkit is available in English, Tagalog, Bisaya,
+    Vietnamese, and Khmer, supporting accessibility
+    across different communities.
+  </p>
+  <p>
+    PAUSE is not a replacement for parenting programs,
+    professional counseling, or child protection services.
+    It is an accessible entry point into deeper learning
+    and continued support.
+  </p>
+  <p class="center">
+    <a class="action"
+       href="https://pause2026.github.io/VEWU_PAUSE/"
+       target="_blank">
+      Explore the PAUSE Toolkit
+    </a>
+  </p>
+</section>
+
+<!-- CIRCLE OF CHANGE -->
+<section class="page">
+  <div class="eyebrow">05 · The Reflection Journey</div>
+  <h2>Circle of Change</h2>
+  <p class="lead">
+    Five stations. Five opportunities to reflect.
+    One journey from remembering to choosing differently.
+  </p>
+  <div class="timeline">
+    <article>
+      <h3>1. Bigat ng Bato · Remember</h3>
+      <p>
+        Participants look back at the discipline they
+        experienced while growing up, who taught them,
+        and what memories they continue to carry.
+      </p>
+    </article>
+    <article>
+      <h3>2. Tali ng Ugali · Notice</h3>
+      <p>
+        Participants recognize their present emotional
+        reactions, triggers, and recurring patterns
+        when responding to children.
+      </p>
+    </article>
+    <article>
+      <h3>3. Punla ng Pagbabago · Choose</h3>
+      <p>
+        Participants identify what they want to change
+        and the first small action they can take.
+      </p>
+    </article>
+    <article>
+      <h3>4. Haligi ng Paggabay · Guide</h3>
+      <p>
+        Participants reflect on how to establish
+        boundaries and expectations while protecting
+        children's dignity.
+      </p>
+    </article>
+    <article>
+      <h3>5. Pangako · Commit</h3>
+      <p>
+        Participants express a personal commitment
+        toward the kind of guidance and relationship
+        they want to build with children.
+      </p>
+    </article>
+  </div>
+  <div class="highlight">
+    <strong>Important:</strong> The Circle of Change is a
+    reflection activity, not a clinical assessment or
+    a guarantee of behavioral change.
+  </div>
+</section>
+
+<!-- COMMUNITY IMPACT -->
+<section class="page" id="impact">
+  <div class="eyebrow">06 · From Innovation to Community</div>
+  <h2>Taking PAUSE beyond the toolkit</h2>
+  <div class="rule"></div>
+  <p>
+    Following its development at the Asia-Pacific Youth-Led
+    Summit, PAUSE began moving from an idea into
+    community-based implementation.
+  </p>
+  <p>
+    Through engagements in Valenzuela City, the initiative
+    reached parents, teachers, barangay and community workers,
+    and other adults who play important roles in children's lives.
+  </p>
+  <div class="two-col">
+    <div class="panel center">
+      <div class="stat">210+</div>
+      <strong>People reached</strong>
+      <p class="caption">
+        Parents, teachers, and community workers
+      </p>
+    </div>
+    <div class="panel center purple">
+      <div class="stat">4,000+</div>
+      <strong>PAUSE cards distributed</strong>
+      <p class="caption">
+        Supporting wider community awareness and access
+      </p>
+    </div>
+  </div>
+  <img class="story-art"
+       src="assets/2.png"
+       alt="Mother and child sharing a quiet moment">
+  <h3>Beyond the numbers</h3>
+  <p>
+    What stayed with us were not only the number of people
+    reached or the cards distributed, but the conversations
+    that emerged when participants were invited to reflect.
+  </p>
+  <p>
+    One teacher shared that she wished she had experienced
+    PAUSE even before getting married and becoming a mother.
+    She felt that having the opportunity to reflect earlier
+    could have helped her become the mother and guardian
+    she wanted to be.
+  </p>
+  <div class="highlight">
+    <p class="quote">
+      Reflection should not begin only when something
+      has already gone wrong.
+    </p>
+  </div>
+  <p>
+    Not everyone immediately changes their beliefs about
+    discipline. Some participants may still consider physical
+    punishment necessary. Recognizing this is important:
+    a reflection session is a beginning, not proof that
+    long-standing practices have already changed.
+  </p>
+</section>
+
+<!-- EVIDENCE -->
+<section class="page">
+  <div class="eyebrow">07 · What We Are Learning</div>
+  <h2>What the pilot can tell us</h2>
+  <p>
+    PAUSE has demonstrated the practical possibility of
+    bringing short, youth-designed reflection experiences
+    into community settings and connecting these activities
+    with existing networks.
+  </p>
+  <div class="two-col">
+    <div class="panel green">
+      <h3>What we have observed</h3>
+      <p>
+        Participants have shared personal memories,
+        recognized emotional responses, and expressed
+        commitments to respond differently to children.
+      </p>
+    </div>
+    <div class="panel pink">
+      <h3>What remains to be tested</h3>
+      <p>
+        Whether these commitments translate into sustained
+        changes in discipline, improved parent-child
+        relationships, or reduced violence over time.
+      </p>
+    </div>
+  </div>
+  <h3>Emerging lessons</h3>
+  <p>
+    First, reflection can make conversations about discipline
+    more personal and approachable. Second, adults need
+    practical guidance and support after reflection.
+    Third, community workers and existing programs can
+    provide pathways for continued engagement.
+  </p>
+  <p>
+    Finally, PAUSE needs stronger monitoring and follow-up
+    to understand how participants use what they have learned
+    after leaving a session.
+  </p>
+</section>
+
+<!-- PARTICIPANT VOICES -->
+<section class="page" id="voices">
+  <div class="eyebrow">08 · Voices From the Circle</div>
+  <h2>What people carried into their reflections</h2>
+  <div class="rule"></div>
+  <p>
+    The Circle of Change invited participants to share
+    experiences, emotions, realizations, and commitments.
+    These reflections are personal expressions rather
+    than measures of completed behavior change.
+  </p>
+  <p>
+    This collection is presented without response totals,
+    because it is not intended to represent every reflection
+    gathered during implementation.
+  </p>
+  <img class="story-art"
+       src="assets/3.png"
+       alt="Child looking at a drawing">
+  <p class="caption">
+    The following sections are organized by the five
+    stages of the Circle of Change.
+  </p>
+</section>
+
+<!-- FIVE STAGES OF REFLECTIONS -->
+<div id="reflection-pages"></div>
+
+<!-- CONTINUITY -->
+<section class="page">
+  <div class="eyebrow">09 · Beyond the First Reflection</div>
+  <h2>What happens after someone chooses to change?</h2>
+  <img class="story-art"
+       src="assets/9.png"
+       alt="Child imagining a safe and happy relationship">
+  <p>
+    A parent may leave PAUSE with the commitment
+    to stop shouting. A teacher may recognize that
+    their frustration affects the way they speak
+    to children. A caregiver may begin questioning
+    whether physical punishment is necessary.
+  </p>
+  <p>
+    But these realizations need opportunities for practice,
+    encouragement, and continued support.
+  </p>
+  <p>
+    This is where PAUSE can complement existing positive
+    parenting, family development, child protection,
+    and community programs.
+  </p>
+  <div class="steps">
+    <div class="step">Reflect</div>
+    <div class="step">Recognize</div>
+    <div class="step">Commit</div>
+    <div class="step">Connect</div>
+    <div class="step">Continue</div>
+  </div>
+  <p>
+    PAUSE can serve as an opening activity before a parenting
+    session, a self-guided resource shared with families,
+    or a reflection activity alongside existing community
+    engagements.
+  </p>
+  <p>
+    Following the pilot, PAUSE has already been invited
+    to introduce the initiative in two parenting sessions,
+    while its reflection cards continue to circulate
+    through community networks.
+  </p>
+  <div class="highlight">
+    <strong>
+      PAUSE does not need to replace existing programs.
+      It can become the doorway to them.
+    </strong>
+  </div>
+</section>
+
+<!-- IMPLEMENTATION GUIDE -->
+<section class="page">
+  <div class="eyebrow">10 · Community Implementation Guide</div>
+  <h2>How partners can use PAUSE</h2>
+  <p class="lead">
+    No new parenting system to build.
+    Just a space to pause, reflect, and connect.
+  </p>
+  <div class="two-col">
+    <div class="panel">
+      <h3>SHARE</h3>
+      <p>
+        Introduce the digital toolkit through existing
+        parent, caregiver, teacher, youth, and community networks.
+      </p>
+    </div>
+    <div class="panel purple">
+      <h3>INVITE</h3>
+      <p>
+        Offer participants a few quiet minutes to explore
+        the experience privately and voluntarily.
+      </p>
+    </div>
+    <div class="panel blue">
+      <h3>REFLECT</h3>
+      <p>
+        Allow participants to move at their own pace,
+        consider the questions, and save reflections
+        if they choose.
+      </p>
+    </div>
+    <div class="panel green">
+      <h3>CONNECT & CONTINUE</h3>
+      <p>
+        Introduce available parenting programs,
+        community services, resources, and support
+        for continued learning.
+      </p>
+    </div>
+  </div>
+  <h3>Facilitating with care</h3>
+  <p>
+    Participants should never be pressured to disclose
+    personal experiences or traumatic memories publicly.
+    They must be free to skip questions or stop.
+  </p>
+  <p>
+    Facilitators should avoid shaming parents and caregivers,
+    while maintaining a clear position that violence
+    against children is unacceptable.
+  </p>
+  <p>
+    Where disclosures suggest a child is at risk,
+    facilitators should follow established safeguarding
+    and referral procedures rather than attempting
+    to handle the case through PAUSE alone.
+  </p>
+</section>
+
+<!-- PARTNERSHIP -->
+<section class="page" id="partners">
+  <div class="eyebrow">11 · The PAUSE Deal</div>
+  <h2>Invest in the moment before change.</h2>
+  <img class="story-art"
+       src="assets/11.png"
+       alt="Mother and child learning together">
+  <p class="lead">
+    We have seen that people are willing to reflect
+    when they are given the space and opportunity.
+    Now, we want to bring that opportunity to more
+    families and communities.
+  </p>
+  <p>
+    We are looking for governments, organizations,
+    child protection partners, and community stakeholders
+    who can help strengthen and sustain PAUSE.
+  </p>
+  <div class="two-col">
+    <div class="panel">
+      <h3>Strengthen the Toolkit</h3>
+      <p>
+        Improve accessibility, content, language support,
+        user experience, and resource pathways.
+      </p>
+    </div>
+    <div class="panel purple">
+      <h3>Expand Community Reach</h3>
+      <p>
+        Support reflection cards, community engagements,
+        and implementation in additional locations.
+      </p>
+    </div>
+    <div class="panel blue">
+      <h3>Build Facilitator Capacity</h3>
+      <p>
+        Develop practical facilitation and safeguarding
+        guidance for local partners and community workers.
+      </p>
+    </div>
+    <div class="panel green">
+      <h3>Connect to Existing Systems</h3>
+      <p>
+        Establish referral and collaboration pathways
+        with positive parenting and child protection programs.
+      </p>
+    </div>
+  </div>
+  <h3>What partnership can make possible</h3>
+  <p>
+    With appropriate resources and technical support,
+    PAUSE can move beyond a promising pilot toward a
+    structured, replicable, and responsibly evaluated
+    community reflection approach.
+  </p>
+  <p>
+    This would include strengthening facilitator guidance,
+    documenting implementation, testing follow-up methods,
+    and understanding whether the initiative helps
+    participants access continued support.
+  </p>
+  <div class="highlight">
+    <p class="quote">
+      We are not asking partners to build another system
+      from the ground up. We are inviting them to help
+      create an accessible entry point into the systems
+      that already exist.
+    </p>
+  </div>
+</section>
+
+<!-- EVALUATION -->
+<section class="page">
+  <div class="eyebrow">12 · Looking Forward</div>
+  <h2>From reflection to lasting change</h2>
+  <p>
+    As PAUSE develops, the team aims to strengthen how
+    it documents both immediate participant experiences
+    and longer-term outcomes.
+  </p>
+  <div class="timeline">
+    <article>
+      <h3>Immediate reflection</h3>
+      <p>
+        Document participation, accessibility,
+        experience of the activity, and voluntary
+        reflections or commitments.
+      </p>
+    </article>
+    <article>
+      <h3>Follow-up learning</h3>
+      <p>
+        Explore whether participants remember their
+        commitments, try alternative responses,
+        and identify barriers to change.
+      </p>
+    </article>
+    <article>
+      <h3>Connections to support</h3>
+      <p>
+        Track whether participants are introduced
+        or referred to existing parenting and
+        child protection resources, where appropriate.
+      </p>
+    </article>
+    <article>
+      <h3>Community sustainability</h3>
+      <p>
+        Examine how trained facilitators and local
+        institutions can continue offering PAUSE
+        within their existing activities.
+      </p>
+    </article>
+  </div>
+  <p>
+    Any future evaluation should protect participants'
+    privacy, avoid unnecessary collection of sensitive
+    childhood experiences, and distinguish expressed
+    intentions from verified behavior changes.
+  </p>
+</section>
+
+<!-- REFERENCES -->
+<section class="page">
+  <div class="eyebrow">13 · Evidence & Further Reading</div>
+  <h2>Research and resources informing PAUSE</h2>
+  <p>
+    PAUSE is grounded in a child-rights approach
+    and draws on established evidence about corporal
+    punishment, nonviolent discipline, and parenting support.
+  </p>
+  <div class="panel">
+    <h3>World Health Organization</h3>
+    <p>
+      Corporal Punishment and Health.
+      Evidence on the health and developmental
+      consequences of physical punishment.
+    </p>
+    <a href="https://www.who.int/news-room/fact-sheets/detail/corporal-punishment-and-health"
+       target="_blank">Read resource</a>
+  </div>
+  <div class="panel" style="margin-top:15px">
+    <h3>UNICEF</h3>
+    <p>
+      Parenting and child protection resources
+      supporting positive, nonviolent approaches
+      to raising and guiding children.
+    </p>
+    <a href="https://www.unicef.org/parenting"
+       target="_blank">Read resources</a>
+  </div>
+  <div class="panel" style="margin-top:15px">
+    <h3>United Nations Convention on the Rights of the Child</h3>
+    <p>
+      Article 19 recognizes children's right to
+      protection from all forms of physical or
+      mental violence while in the care of parents,
+      guardians, or others responsible for them.
+    </p>
+    <a href="https://www.ohchr.org/en/instruments-mechanisms/instruments/convention-rights-child"
+       target="_blank">Read convention</a>
+  </div>
+  <p class="caption">
+    These sources inform the report's wider context.
+    PAUSE pilot observations are reported separately
+    and should not be interpreted as causal evidence
+    of reduced violence.
+  </p>
+</section>
+
+<!-- CLOSING -->
+<section class="page center">
+  <div class="eyebrow">A Child's Hope · A Shared Responsibility</div>
+  <img class="story-art"
+       src="assets/12.png"
+       alt="Mother and child in a peaceful home">
+  <h2>Let's create the PAUSE before the change.</h2>
+  <p class="lead">
+    A few quiet minutes. A memory. An honest reflection.
+    And the possibility of responding differently next time.
+  </p>
+  <p>
+    From a child's perspective, PAUSE is about breaking
+    the cycle of hurt that no child should have to carry
+    into the next generation.
+  </p>
+  <p>
+    But reflection is only the beginning. Through our
+    digital toolkit and short community engagements,
+    we hope PAUSE can serve as an accessible first step
+    for parents and caregivers to recognize the need
+    for change and connect with existing positive
+    parenting programs, resources, and support systems.
+  </p>
+  <p>
+    That is why we invite governments, organizations,
+    and child protection partners to help us bridge
+    that gap, because PAUSE was never meant to stand
+    alone, but to open the door to lasting change
+    for children and families.
+  </p>
+  <p class="quote">Love should never have to hurt.</p>
+  <a class="action"
+     href="https://pause2026.github.io/VEWU_PAUSE/"
+     target="_blank">Explore PAUSE</a>
+  <h3 style="margin-top:45px">Connect With the Team</h3>
+  <p>
+    <a href="mailto:vewu.pause@gmail.com">
+      vewu.pause@gmail.com
+    </a>
+  </p>
+  <p>+63 936 9474 474</p>
+  <p>
+    Focal Person: Lyra Ashley U. Embalsado<br>
+    Philippines
+  </p>
+  <div class="footer">
+    Violence Ends With Us · PAUSE Toolkit · Pilot 2026<br>
+    Designed by young people · Asia-Pacific
+  </div>
+</section>
+
+<script>
+/*
+ PARTICIPANT REFLECTION COLLECTION
+
+ The five stages are retained in their original order.
+
+ Add the original transcribed participant responses
+ to each quotes array below.
+
+ Do not invent participant quotations or substitute
+ illustrative text for actual collected responses.
+
+ The Pangako examples below are from previously
+ supplied participant quotations.
+
+ The other arrays are intentionally empty until
+ their verified original transcriptions are inserted.
+*/
+
+const reflectionStages = [
+  {
+    title: "Bigat ng Bato",
+    english: "Past · Remember",
+    intro:
+      "This station invites participants to remember how " +
+      "they experienced discipline growing up, including " +
+      "the memories and lessons they continue to carry.",
+    art: "pause-art-07.webp",
+    quotes: []
+  },
+  {
+    title: "Tali ng Ugali",
+    english: "Now · Notice",
+    intro:
+      "Participants look at how they respond today, " +
+      "recognizing emotional triggers, frustrations, " +
+      "and recurring patterns in their interactions " +
+      "with children.",
+    art: "pause-art-04.webp",
+    quotes: []
+  },
+  {
+    title: "Punla ng Pagbabago",
+    english: "Shift · Choose",
+    intro:
+      "Participants consider what they want to change " +
+      "and identify small, practical steps toward " +
+      "responding differently.",
+    art: "pause-art-03.webp",
+    quotes: []
+  },
+  {
+    title: "Haligi ng Paggabay",
+    english: "Limits · Guide",
+    intro:
+      "Participants reflect on the boundaries and " +
+      "expectations that help children learn while " +
+      "preserving their dignity and safety.",
+    art: "pause-art-10.webp",
+    quotes: []
+  },
+  {
+    title: "Pangako",
+    english: "Commit",
+    intro:
+      "Participants express the changes they hope " +
+      "to continue in their relationships with children.",
+    art: "pause-art-09.webp",
+    quotes: [
+      "I promise that I won’t be an angry mom.",
+      "I promise not to be easily angered or to let my emotions take over.",
+      "I promise to remain calm, understanding, and loving toward my child.",
+      "I can control my temper and prevent myself from shouting so I can avoid doing anything out of anger.",
+      "Even if your father and I are no longer together, we will continue to guide and support you."
+    ]
+  }
+];
+
+function makeElement(tag, className, content) {
+  const element = document.createElement(tag);
+  if (className) element.className = className;
+  if (content !== undefined) {
+    element.textContent = content;
+  }
+  return element;
+}
+
+const reflectionContainer =
+  document.getElementById("reflection-pages");
+
+reflectionStages.forEach((stage, index) => {
+  const section = makeElement("section", "page");
+
+  const eyebrow = makeElement(
+    "div",
+    "eyebrow",
+    `Circle of Change · Stage ${index + 1}`
+  );
+
+  const heading = makeElement("h2", "", stage.title);
+  const label = makeElement("div", "stage-label", stage.english);
+  const intro = makeElement("p", "lead", stage.intro);
+
+  const illustration = makeElement("img", "story-art");
+  illustration.src = "assets/" + stage.art;
+  illustration.alt = stage.title + " illustration";
+
+  const grid = makeElement("div", "note-grid");
+
+  stage.quotes.forEach((quote) => {
+    const card = makeElement("div", "sticky", quote);
+    grid.appendChild(card);
+  });
+
+  section.appendChild(eyebrow);
+  section.appendChild(heading);
+  section.appendChild(label);
+  section.appendChild(intro);
+  section.appendChild(illustration);
+
+  if (stage.quotes.length) {
+    section.appendChild(grid);
+  } else {
+    section.appendChild(
+      makeElement(
+        "p",
+        "caption",
+        "Original participant transcriptions to be inserted."
+      )
+    );
+  }
+
+  reflectionContainer.appendChild(section);
+});
+</script>
+
+</body>
+</html>
