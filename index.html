@@ -269,7 +269,7 @@ nav a {
     Positive Alternatives to Unsafe & Severe Enforcement
   </p>
   <img class="story-art"
-       src="assets/1.png"
+       src="assets/13.png"
        alt="Mother embracing her child">
   <h2>A moment to look back.<br>A moment to choose differently.</h2>
   <p class="subtitle">
@@ -997,76 +997,92 @@ nav a {
 /*
  PARTICIPANT REFLECTION COLLECTION
 
- The five stages are retained in their original order.
+ Five selected English-translated responses per stage.
+ The five stages remain in their original order.
 
- Add the original transcribed participant responses
- to each quotes array below.
-
- Do not invent participant quotations or substitute
- illustrative text for actual collected responses.
-
- The Pangako examples below are from previously
- supplied participant quotations.
-
- The other arrays are intentionally empty until
- their verified original transcriptions are inserted.
+ Review the translations against the original
+ participant transcriptions before publication.
 */
 
 const reflectionStages = [
   {
     title: "Bigat ng Bato",
     english: "Past · Remember",
-    intro:
-      "This station invites participants to remember how " +
-      "they experienced discipline growing up, including " +
-      "the memories and lessons they continue to carry.",
-    art: "pause-art-07.webp",
-    quotes: []
+    intro: "This station invites participants to remember how they experienced discipline growing up, including the memories and lessons they continue to carry.",
+    quotes: [
+      "I learned how to discipline my children from my parents. I copied what I saw them do while I was growing up. It had both good and bad effects. The good was that I learned from my mistakes. The bad was that I became fearful and avoided admitting things because I was afraid of being scolded.",
+
+      "Some of the ways I teach my child still come from my mother. But I do not copy everything, especially shouting, hitting, and pinching. I have noticed that children sometimes close their eyes when they are frequently shouted at or scolded.",
+
+      "I learned how to discipline my children from my parents. I experienced the same kind of discipline when I was young, and I believe it had a positive effect on me because I grew up well, became a professional, and learned discipline.",
+
+      "I learned different ways of disciplining children through seminars I attended as a Child Development Teacher. But sometimes, I still adopt the way I was disciplined while growing up.",
+
+      "I learned that discipline is not only about hurting children. It is also about understanding, explaining, and guiding them."
+    ]
   },
   {
     title: "Tali ng Ugali",
     english: "Now · Notice",
-    intro:
-      "Participants look at how they respond today, " +
-      "recognizing emotional triggers, frustrations, " +
-      "and recurring patterns in their interactions " +
-      "with children.",
-    art: "pause-art-04.webp",
-    quotes: []
+    intro: "Participants look at how they respond today, recognizing emotional triggers, frustrations, and recurring patterns in their interactions with children.",
+    quotes: [
+      "I am short-tempered and get angry quickly. Sometimes, this is how I release my frustration. I need to avoid it because it does not help and can make arguments worse.",
+
+      "Sometimes, I get angry quickly, especially when they do not listen to me. I need to control my emotions and remain calm in those situations.",
+
+      "Shouting is my first response when something wrong happens. But as time goes by, I am learning to control myself.",
+
+      "I think I react with anger because I do not even notice that I am already shouting.",
+
+      "Maybe it is because I am tired and have many things on my mind that I get angry. I will change how I react to my child."
+    ]
   },
   {
     title: "Punla ng Pagbabago",
     english: "Shift · Choose",
-    intro:
-      "Participants consider what they want to change " +
-      "and identify small, practical steps toward " +
-      "responding differently.",
-    art: "pause-art-03.webp",
-    quotes: []
+    intro: "Participants consider what they want to change and identify small, practical steps toward responding differently.",
+    quotes: [
+      "From now on, I will stop first, take a breath, and try to understand before getting upset, so I will not hit or shout at my child.",
+
+      "I chose this change because children deserve calm parents and a calm environment.",
+
+      "I want to change the way I discipline my children. I want to be more patient and not get angry so easily.",
+
+      "My first step is to gradually apply PAUSE. Even if I forget, I will start again so I can get used to it.",
+
+      "I will PAUSE before reacting. I will calm down, listen to the child, and understand their emotions."
+    ]
   },
   {
     title: "Haligi ng Paggabay",
     english: "Limits · Guide",
-    intro:
-      "Participants reflect on the boundaries and " +
-      "expectations that help children learn while " +
-      "preserving their dignity and safety.",
-    art: "pause-art-10.webp",
-    quotes: []
+    intro: "Participants reflect on the boundaries and expectations that help children learn while preserving their dignity and safety.",
+    quotes: [
+      "The limits I give allow them to do the things they want, as long as they do not hurt others. I explain these limits properly and in a way they can easily understand.",
+
+      "I will give every child more opportunities to speak, even when I think what they are saying is wrong. They should be able to say what they want. It should not always be about rules. We also need to listen to their concerns.",
+
+      "There should be limits on children's use of gadgets. There should be time for studying and playing. Rules must be clear and explained to children so they understand why they are important.",
+
+      "If someone makes a mistake, we will talk about it and take positive action.",
+
+      "My child knows that I will not hit or hurt them. Instead, we will talk about the things they have done that were not appropriate. My child also knows that I love them."
+    ]
   },
   {
     title: "Pangako",
     english: "Commit",
-    intro:
-      "Participants express the changes they hope " +
-      "to continue in their relationships with children.",
-    art: "pause-art-09.webp",
+    intro: "Participants express the changes they hope to continue in their relationships with children.",
     quotes: [
-      "I promise that I won’t be an angry mom.",
-      "I promise not to be easily angered or to let my emotions take over.",
-      "I promise to remain calm, understanding, and loving toward my child.",
-      "I can control my temper and prevent myself from shouting so I can avoid doing anything out of anger.",
-      "Even if your father and I are no longer together, we will continue to guide and support you."
+      "I promise that I won't be an ANGRY mom.",
+
+      "I promise that I will no longer shout or get angry so easily, and that I will be more patient.",
+
+      "I promise my children that I will not shout at them or get angry when they make mistakes. I will work on myself to become a good mother to them.",
+
+      "As a mother, I promise that I will no longer keep shouting at my child. I have realized that always shouting is not good. As a daycare teacher, I will be more patient with the children.",
+
+      "I promise my child and all children that I will not allow them to be hurt, physically or mentally, when I am by their side. I will do my best to keep my child safe and continue guiding them."
     ]
   }
 ];
@@ -1096,10 +1112,6 @@ reflectionStages.forEach((stage, index) => {
   const label = makeElement("div", "stage-label", stage.english);
   const intro = makeElement("p", "lead", stage.intro);
 
-  const illustration = makeElement("img", "story-art");
-  illustration.src = "assets/" + stage.art;
-  illustration.alt = stage.title + " illustration";
-
   const grid = makeElement("div", "note-grid");
 
   stage.quotes.forEach((quote) => {
@@ -1111,19 +1123,7 @@ reflectionStages.forEach((stage, index) => {
   section.appendChild(heading);
   section.appendChild(label);
   section.appendChild(intro);
-  section.appendChild(illustration);
-
-  if (stage.quotes.length) {
-    section.appendChild(grid);
-  } else {
-    section.appendChild(
-      makeElement(
-        "p",
-        "caption",
-        "Original participant transcriptions to be inserted."
-      )
-    );
-  }
+  section.appendChild(grid);
 
   reflectionContainer.appendChild(section);
 });
